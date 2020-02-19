@@ -1,5 +1,6 @@
 const { createStore } = Redux;
-const { subscribe, dispatch, getState } = createStore(reducer);
+const reduxStore = createStore(reducer);
+const { subscribe, dispatch, getState } = reduxStore;
 
 subscribe(() => {
     ReactDOM.render(<App circles={getState()}/>, document.getElementById('circlesContainer'))

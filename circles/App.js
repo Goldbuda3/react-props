@@ -3,7 +3,7 @@ const App = (props) => {
     let { circles } = props;
     
     let circleComponents = circles.map( (circle, arrayIndex) => {
-        return <Circle circle={circle} key={arrayIndex}/> 
+        return <Circle circle={circle} key={arrayIndex} uniqueId={arrayIndex}/> 
     });
 
     return <div>{circleComponents}</div>
